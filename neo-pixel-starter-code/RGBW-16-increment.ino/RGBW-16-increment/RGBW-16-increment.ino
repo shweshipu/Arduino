@@ -42,7 +42,7 @@ void loop() {
 
   // Increment the led.  This can also be done with led++
   led = led + 1;
-  
+  Serial.println(led);
 
   if (red > 255) red = 0;
    if (green > 255) green = 0;

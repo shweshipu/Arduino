@@ -31,7 +31,7 @@ int i;
 
 void loop() {
   
-  for ( led = 0; led < 16; led++){  
+  for ( led = 15; led > -1; led--){  
     strip.setPixelColor(led, red, green , blue, white);
   }//end of for loop
     strip.show();
