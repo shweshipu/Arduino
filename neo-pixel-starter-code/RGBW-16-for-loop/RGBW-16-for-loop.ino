@@ -36,9 +36,9 @@ void loop() {
   }//end of for loop
     strip.show();
     delay(wait);
-    red = red + 8;
-    green = green + 16;
-    blue = blue + 32;
+    red = red + 99;
+    green = green + 17;
+    blue = blue + 31;
     white = white + 1;
 
     if (red > 255) red = 0;
