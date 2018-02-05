@@ -1,3 +1,16 @@
+#include <Adafruit_NeoPixel.h>
+#ifdef __AVR__
+  #include <avr/power.h>
+#endif
+
+#define PIN 6
+#define NUM_LEDS 16
+#define BRIGHTNESS 25
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRBW + NEO_KHZ800);
+
+
+
+
 char incomingByte = 0;   // for incoming serial data
 int Range [ 2 ];
 
@@ -41,7 +54,16 @@ void loop() {
       //convert the string to an integer
       inches = inchstr.toInt();
       Serial.println(inches);
+      set_neopixel(inches);
         }
        }
       }
+      
 }
+void set_neopixel(int inches){
+  int i;
+  for(i = 0;i<inches && i<16;i++){
+    strip.setPixelColor(i, strip.Color(0,0,0,255 ));
+  }
+}
+
