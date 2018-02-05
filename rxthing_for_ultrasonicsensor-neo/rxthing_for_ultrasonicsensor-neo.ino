@@ -39,8 +39,8 @@ void loop() {
       }
       }
       //convert the string to an integer
-      inches = int(inchstr);
-      Serial.println(Range[0]);
+      inches = inchstr.toInt();
+      Serial.println(inches);
         }
        }
       }
