@@ -46,15 +46,10 @@ void loop()
   cm = (duration/2) / 29.1;
   inches = (duration/2) / 74; 
 
-  if(inches >=300){
-    Serial.println("range too far!");
-  }
-  else{
+  if(inches <= 60){
+  Serial.print("R");
   Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
+
   }
   previnput=inches;
   
