@@ -42,8 +42,9 @@ void loop() {
          for ( i = 0; i < 2; i++){
       if(Range[i] != 82 && Range[i] != NULL){
         //add the digits gotten by concatenation (ex. 2+2 = 22)
-        String S = Range[i]-48;
-        inchstr = inchstr + Range;
+        inchstr = inchstr + (Range[i]-48);
+        
+        
         Serial.println(Range[i]);
       }
       }
