@@ -118,7 +118,7 @@ void loop() {
      }
      if(myDecoder.value==0xA10C840B){
       Serial.println(" play ");
-      digitalWrite(7,HIGH);
+      digitalWrite(7,LOW);
       servo1.attach(9); //puts it back to the right pins
       servo2.attach(10);
      }
